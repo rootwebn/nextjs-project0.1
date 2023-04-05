@@ -2,6 +2,7 @@ import s from "@/styles/Home.module.scss";
 import { josefSans } from "./_app";
 import section1Pic from "../../public/img/min.png";
 import Image from "next/image";
+import Link from "next/link";
 import {
   section1Data,
   section2Data,
@@ -87,9 +88,9 @@ const Home = () => {
             <article key={item.id} className={s.itemActivity}>
               <Image src={item.imgPath} alt={""} width={64} height={64} />
               <p className={josefSans.className}>{item.hData}</p>
-              <a className={josefSans.className} href="/">
+              <Link href={'/'} className={josefSans.className}>
                 MORE
-              </a>
+              </Link>
             </article>
           ))}
         </article>
@@ -110,6 +111,7 @@ const Home = () => {
             </article>
           ))}
         </article>
+
         <article className={s.clientsFeedbackBlock}>
           <h1 className={josefSans.className}>What Clients Say</h1>
            <article className={s.clientsFeedbackItems}>
