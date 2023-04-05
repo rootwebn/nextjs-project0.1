@@ -21,7 +21,7 @@ const Home = () => {
       <section className={s.section1}>
         <article className={s.containerDesc}>
           <article className={s.desc}>
-            <h1 className={josefSans.className}>Hello, I'am </h1>
+            <h1 className={josefSans.className}>Hello, I&apos;am </h1>
             <strong className={josefSans.className}>Kevin Smith</strong>
           </article>
           <button className={classs1}>Get in touch</button>
@@ -73,7 +73,7 @@ const Home = () => {
         </article>
         <article className={s.descAboutMe}>
           <p className={josefSans.className}>
-            Hi I'm Kevin Smith. Click here to add your own text and edit me. Ut
+            Hi I&apos;m Kevin Smith. Click here to add your own text and edit me. Ut
             enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
             ut aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
