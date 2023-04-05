@@ -15,6 +15,8 @@ import {
 const Home = () => {
   const classs5 = s.formSubmit + " " + josefSans.className;
   const classs1 = s.btnDesc + " " + josefSans.className;
+  const classs2 = s.additionBtn + " " + josefSans.className;
+//TODO Fix Font-Size on big screens, also fix border btn in section 3
 
   return (
     <main className={s.mainContainer}>
@@ -98,7 +100,7 @@ const Home = () => {
           <h2 className={josefSans.className}>
             I am happy to know you that 300+ projects done sucessfully!
           </h2>
-          <button className={s.additionBtn}>Learn More</button>
+          <button className={classs2}>Learn More</button>
         </article>
       </section>
       <section className={s.section4}>

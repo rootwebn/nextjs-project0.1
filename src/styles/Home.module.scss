@@ -252,11 +252,12 @@
         padding-bottom: 1em;
       }
 
-      button {
+      .additionBtn {
         color: white;
         background-color: rgb(20, 20, 20);
         padding: 20px 30px;
-        @include FS-flex(1rem, 2.5, 0.5rem, 1rem);
+        border: 2px solid grey;
+        @include FS-flex(1rem, 2.5, 1rem, 1.5rem);
       }
     }
   }
