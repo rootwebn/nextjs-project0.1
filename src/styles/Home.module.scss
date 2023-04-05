@@ -1,0 +1,512 @@
+@import "./variables.scss";
+
+.mainContainer {
+  min-height: 100vh;
+
+  .section1 {
+    //flexible for most screen
+    @media screen and (max-width: 90em) {
+      min-height: 80vh;
+    }
+    @media screen and (max-width: 80em) {
+      min-height: 60vh;
+    }
+    @media screen and (max-width: 65em) {
+      padding: $pdSection1MediumScreen;
+    }
+    @media screen and (max-width: 50em) {
+      min-height: 60vh;
+      padding: $pdSection1MediumScreen;
+    }
+    @media screen and (max-width: 40em) {
+      display: block;
+      padding: $pdSection1MediumScreen;
+      min-height: 70vh;
+    }
+    background-color: rgba(192, 167, 108, 1);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.6fr;
+    grid-template-rows: 0fr 0.5fr 1fr;
+    // min-width: 100vw;
+    min-height: 100vh;
+    padding: $pdSection1;
+
+    .containerDesc {
+      @media screen and (max-width: 50em) {
+        grid-column: 1/4;
+      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      grid-column: 1/3;
+      grid-row: 2/3;
+
+      .desc {
+        h1 {
+          font-weight: 400;
+          @include FS-flex(1rem, 2.5, 1rem, 2rem);
+        }
+        strong {
+          @include FS-flex(1rem, 4, 2rem, 4rem);
+        }
+      }
+
+      .btnDesc {
+        @include FS-flex(1rem, 0.75, 1rem, 2rem);
+        align-self: flex-start;
+        padding: 15px 35px;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .section1ImageContainer {
+      @media screen and (max-width: 900px) {
+        justify-content: center;
+      }
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      grid-column: 3/4;
+      grid-row: 2/4;
+      .imageSection1 {
+        @media screen and (max-width: 70em) {
+          height: 30em;
+          width: 25em;
+        }
+        @media screen and (max-width: 50em) {
+          height: 27em;
+          width: 22em;
+        }
+        @media screen and (max-width: 40em) {
+          height: 30em;
+          width: 25em;
+        }
+      }
+    }
+    .totalStatsLayout {
+      @media screen and (max-width: 40em) {
+        display: block;
+      }
+      grid-column: 1/3;
+      grid-row: 3/4;
+      display: grid;
+      .totalStatsBlock {
+        @media screen and (max-width: 40em) {
+          padding-block: 1.5em;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-bottom: 4em;
+        .totalStatsDesc {
+          strong {
+            @include FS-flex(1rem, 2, 3.5rem, 7rem);
+            font-weight: 400;
+          }
+          h1 {
+            @include FS-flex(1rem, 1.5, 1.5rem, 2rem);
+          }
+          p {
+            @media screen and (max-width: 40em) {
+              max-width: none;
+            }
+            @include FS-flex(1rem, 1.5, 1rem, 1.2rem);
+            max-width: 15em;
+          }
+        }
+      }
+    }
+  }
+
+  .section2 {
+    @media screen and (max-width: 90em) {
+      padding: $pdSection2MediumScreen;
+      min-height: 40vh;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 1fr 10px;
+    background-color: rgb(20, 20, 20);
+    min-height: 50vh;
+    padding: $pdSection2;
+    p {
+      color: rgba(162, 143, 100, 0.725);
+      grid-column: 1/2;
+      grid-row: 1/2;
+      @include FS-flex(1rem, 2.5, 1rem, 2rem);
+    }
+    .strenghtsLayout {
+      @media screen and (max-width: 40em) {
+        display: block;
+      }
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      grid-column: 1/4;
+      grid-row: 3/4;
+
+      .typeBlock {
+        @media screen and (max-width: 60em) {
+          max-width: 30%;
+        }
+        @media screen and (max-width: 40em) {
+          max-width: none;
+        }
+        max-width: 25%;
+        padding-top: 1em;
+        h1 {
+          @include FS-flex(1rem, 4, 0.5rem, 2rem);
+          font-weight: 400;
+          color: white;
+        }
+
+        p {
+          @include FS-flex(1rem, 2.5, 0.5rem, 1.3rem);
+          font-weight: 300;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .section3 {
+    @media screen and (max-width: 40em) {
+      min-height: 50vh;
+      grid-template-rows: 0.1fr 0.4fr 1fr;
+      row-gap: 1rem;
+      padding: $pdSection3MediumScreen;
+    }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    min-height: 100vh;
+    row-gap: 3rem;
+    background-color: rgba(192, 167, 108, 1);
+    padding: $pdSection3;
+    .blockAboutMe {
+      p {
+        @include FS-flex(1rem, 2.5, 0.5rem, 1.5rem);
+        padding-bottom: 30px;
+        font-weight: 300;
+      }
+
+      h5 {
+        @include FS-flex(2rem, 4, 1rem, 3.5rem);
+        font-weight: 400;
+      }
+    }
+
+    .descAboutMe {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      p {
+        @include FS-flex(0.5rem, 4, 1rem, 1.8rem);
+        font-weight: 300;
+      }
+    }
+
+    .itemsActivity {
+      @media screen and (max-width: 65em) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1em;
+      }
+      @media screen and (max-width: 40em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em;
+      }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 1em;
+      .itemActivity {
+        background-color: white;
+        padding: 40px 40px 40px 30px;
+        min-width: 200px;
+        p {
+          @include FS-flex(1rem, 2.5, 0.5rem, 1.5rem);
+          padding: 10px 0px;
+        }
+        a {
+          @include FS-flex(1rem, 2.5, 0.5rem, 1.5rem);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .additionBlock {
+      @media screen and (max-width: 40em) {
+        min-width: 100%;
+      }
+      background-color: rgb(20, 20, 20);
+      padding: 25px;
+      h2 {
+        color: white;
+        @include FS-flex(1rem, 2.5, 1rem, 2rem);
+        font-weight: 400;
+        padding-bottom: 1em;
+      }
+
+      button {
+        color: white;
+        background-color: rgb(20, 20, 20);
+        padding: 20px 30px;
+        @include FS-flex(1rem, 2.5, 0.5rem, 1rem);
+      }
+    }
+  }
+
+  .section4 {
+    @media screen and (max-width: 40em) {
+      display: block;
+    }
+    background-color: rgb(30, 30, 30);
+    padding: $pdSection4;
+
+    h2 {
+      padding-top: 20px;
+      @include FS-flex(1rem, 2.5, 0.5rem, 1.5rem);
+      grid-column: 1/3;
+      grid-row: 1/2;
+      color: rgba(162, 143, 100, 0.725);
+    }
+
+    .achivementsLayout {
+      @media screen and (max-width: 80em) {
+        column-gap: 5rem;
+      }
+      @media screen and (max-width: 65em) {
+        gap: 2rem;
+      }
+      @media screen and (max-width: 40em) {
+        display: block;
+      }
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 10rem;
+      grid-column: 1/3;
+      grid-row: 2/4;
+      .achivementItem {
+        padding-top: 20px;
+        grid-row: 1/2;
+
+        h1 {
+          padding: 20px 0;
+          font-weight: 400;
+          @include FS-flex(1rem, 2, 1rem, 2.2rem);
+          color: white;
+        }
+
+        p {
+          font-weight: 300;
+          letter-spacing: 0.03rem;
+          @include FS-flex(1rem, 2.5, 0.5rem, 1.5rem);
+          color: white;
+        }
+      }
+      .achivementItem:nth-child(-n + 1) {
+        grid-row: 2/3;
+      }
+      .achivementItem:nth-child(-n + 2) {
+        grid-row: 2/3;
+      }
+    }
+    .clientsFeedbackBlock {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 1rem;
+      margin-top: 5rem;
+      h1 {
+        display: flex;
+        justify-content: center;
+        font-weight: 400;
+        @include FS-flex(1rem, 2, 1rem, 3rem);
+        color: white;
+      }
+      .clientsFeedbackItems {
+        @media screen and (max-width: 60em) {
+          display: block;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 3rem;
+        .clientsFeedbackItem {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          gap: 2rem;
+          row-gap: 1rem;
+          border-radius: 1rem;
+          background-color: white;
+          padding: 2rem;
+          margin: 1rem 0;
+          // min-width: 20rem;
+          .itemImgHuman {
+            border-radius: 50%;
+          }
+          p {
+            @include FS-flex(1rem, 2, 1rem, 1.5rem);
+          }
+          p:nth-child(-n + 1) {
+            @include FS-flex(0.5rem, 2, 0.5rem, 1rem);
+          }
+          h1 {
+            color: black;
+            display: flex;
+            justify-content: flex-start;
+            @include FS-flex(1rem, 2, 1rem, 1.5rem);
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .section5 {
+    @media screen and (max-width: 40em) {
+      display: block;
+    }
+    background-color: rgba(192, 167, 108, 1);
+    padding: $pdSection4;
+    h1 {
+      display: flex;
+      align-items: center;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      @include FS-flex(1rem, 2, 1rem, 3rem);
+    }
+    .projectsItems {
+      @media screen and (max-width: 60em) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 2fr);
+      }
+      @media screen and (max-width: 40em) {
+        display: block;
+      }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 2fr);
+      gap: 1rem;
+      grid-column: 1/4;
+      grid-row: 3/5;
+      min-height: 100vh;
+      .projectItem {
+        @media screen and (max-width: 40em) {
+          margin: 1rem 0;
+        }
+        display: flex;
+        align-items: flex-end;
+        min-height: 25em;
+        .containerDesc {
+          padding: 10px 20px;
+          p {
+            color: white;
+            @include FS-flex(0.5rem, 2, 0.5rem, 1.2rem);
+          }
+          h1 {
+            @include FS-flex(1rem, 2, 1rem, 2rem);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .section6 {
+    @media screen and (max-width: 60em) {
+      padding: 0;
+    }
+    background-color: rgba(192, 167, 108, 1);
+    padding: $pdSection6;
+    .formContainer {
+      @media screen and (max-width: 40em) {
+        display: block;
+      }
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: 1fr;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      .formDesc {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        grid-column: 1/2;
+        padding: 2rem 1rem 4rem 2rem;
+        background-color: rgba(39, 33, 36, 1);
+        p {
+          color: white;
+        }
+        p:nth-child(-n + 5) {
+          @include FS-flex(1rem, 2, 1rem, 1.5rem);
+        }
+        p:nth-child(-n + 4) {
+          @include FS-flex(1rem, 2, 1rem, 2.5rem);
+        }
+        p:nth-child(-n + 3) {
+          @include FS-flex(1rem, 2, 1rem, 1.5rem);
+        }
+        p:nth-child(-n + 2) {
+          @include FS-flex(1rem, 2, 1rem, 2.5rem);
+        }
+        p:nth-child(-n + 1) {
+          @include FS-flex(1rem, 2, 1rem, 3rem);
+        }
+      }
+      .formRequestContainer {
+        @media screen and (max-width: 60em) {
+          padding: 1.5rem;
+        }
+        background-color: antiquewhite;
+        padding: 4rem;
+        .form {
+          min-height: 20rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          .formLayout {
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.formList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.formSubmit {
+  font-size: 20px;
+  padding: 15px 20px;
+  max-width: 10em;
+}
+
+.formElement {
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  input {
+    letter-spacing: 0.03em;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+  textarea {
+    letter-spacing: 0.03em;
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+}

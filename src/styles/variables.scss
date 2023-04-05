@@ -1,0 +1,21 @@
+$fs-200: 1.25rem;
+$fs-300: 1.5rem;
+$fs-400: 2rem;
+$fs-l: 3rem;
+$fs-xl: 4rem;
+
+@mixin FS-flex($base-fs, $fs-scaling, $min-fs, $max-fs) {
+  font-size: clamp(
+    #{$min-fs},
+    calc(#{$base-fs} + #{$fs-scaling} * 1vw),
+    #{$max-fs}
+  );
+}
+$pdSection1: min(3vh, 10rem) min(10vw, 5rem) 0 min(10vw, 5rem); 
+$pdSection1MediumScreen: min(5vh, 1rem) min(3vw, 0.2rem) 0 min(6vw, 2rem);
+$pdSection2: min(5vh, 10rem) min(10vw, 10rem) min(5vh, 10rem) min(10vw, 10rem);
+$pdSection2MediumScreen: min(5vh, 10rem) min(6vw, 4rem) min(5vh, 2rem) min(6vw, 4rem);
+$pdSection3: min(5vh, 10rem) min(10vw, 10rem) min(5vh, 10rem) min(10vw, 10rem);
+$pdSection3MediumScreen: min(5vh, 10rem) min(6vw, 4rem) min(5vh, 10rem) min(6vw, 4rem);  
+$pdSection4: min(5vh, 5rem) min(10vw, 10rem) min(5vh, 5rem) min(10vw, 10rem);
+$pdSection6: min(5vh, 5rem) min(10vw, 10rem) 0 min(10vw, 10rem);
